@@ -1,0 +1,9 @@
+www:
+  image: nginx
+  volumes:
+  - data:/usr/share/nginx/html:ro
+
+ftp:
+  build: ftp
+  volumes:
+  - data:/srv/files/ftp
