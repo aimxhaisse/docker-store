@@ -12,4 +12,5 @@ A data store:
 
 ## Adding FTP users
 
-    docker-compose run ftp new-ftp-user
+    docker-compose run ftp new-ftp-user <username>
+    <enter password twice>
