@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
 
-service vsftpd start
-exec tail -f /var/log/vsftpd.log
+vsftpd
+touch /var/log/vsftpd.log
+tail -f /var/log/vsftpd.log
+
