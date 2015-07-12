@@ -1,11 +1,16 @@
 #!/usr/bin/env bash
 
+if [ $# -ne 1 ]
+then
+    echo >&2 "usage: $0 user-login"
+    exit 1
+fi
+
 USER=$1
 
-mkdir /var/www/$USER
+mkdir -p /var/www/$USER
 chmod -w /var/www/$USER
-mkdir www/$USER/www
-chmod -R 755 /var/www/$USER/www
+chmod -R 755 /var/www/$USER
 chown -R vsftpd:nogroup /var/www/$USER
 
 htpasswd -cd /etc/vsftpd/ftpd.passwd $USER

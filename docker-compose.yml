@@ -1,15 +1,15 @@
 www:
   image: nginx
   ports:
-  - 8095:80
+  - "8095:80"
   volumes:
   - data/store:/usr/share/nginx/html
 
 ftp:
   build: ftp
   ports:
-  - 21:21
-  - 20:20
+  - "21:21"
+  - "20:20"
   volumes:
   - data/store:/var/www
-  - data/ftpd.passwd:/etc/vsftpd/ftpd.passwd
+  - data/credentials:/etc/vsftpd
