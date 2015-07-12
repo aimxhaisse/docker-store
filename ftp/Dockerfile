@@ -9,5 +9,6 @@ RUN useradd --home /home/vsftpd --gid nogroup -m --shell /bin/false vsftpd
 ADD vsftpd.conf /etc/vsftpd.conf
 ADD vsftpd.pam /etc/pam.d/vsftpd
 ADD new-ftp-user /bin/
+ADD run-ftpd /
 
-CMD ["vsftpd"]
+CMD /run-ftpd
