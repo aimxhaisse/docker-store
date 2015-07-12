@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+USER=$1
+
+mkdir /var/www/$USER
+chmod -w /var/www/$USER
+mkdir www/$USER/www
+chmod -R 755 /var/www/$USER/www
+chown -R vsftpd:nogroup /var/www/$USER
+
+htpasswd -cd /etc/vsftpd/ftpd.passwd $USER

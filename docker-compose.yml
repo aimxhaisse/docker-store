@@ -3,7 +3,7 @@ www:
   ports:
   - 8095:80
   volumes:
-  - data:/usr/share/nginx/html
+  - data/store:/usr/share/nginx/html
 
 ftp:
   build: ftp
@@ -11,4 +11,5 @@ ftp:
   - 21:21
   - 20:20
   volumes:
-  - data:/srv/files/ftp
+  - data/store:/var/www
+  - data/ftpd.passwd:/etc/vsftpd/ftpd.passwd

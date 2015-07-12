@@ -9,3 +9,7 @@ A data store:
 
     docker-compose build
     docker-compose up -d
+
+## Adding FTP users
+
+    docker-compose run ftp new-ftp-user
