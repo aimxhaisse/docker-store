@@ -1,9 +1,14 @@
 www:
   image: nginx
+  ports:
+  - 8095:80
   volumes:
-  - data:/usr/share/nginx/html:ro
+  - data:/usr/share/nginx/html
 
 ftp:
   build: ftp
+  ports:
+  - 21:21
+  - 20:20
   volumes:
   - data:/srv/files/ftp
