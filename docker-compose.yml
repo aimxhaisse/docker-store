@@ -13,3 +13,11 @@ ftp:
   volumes:
   - data/store:/var/www
   - data/credentials:/etc/vsftpd
+
+sftp:
+  image: atmoz/sftp
+  volumes:
+  - ./data/store:/home/$(USER)/store
+  ports:
+  - "2222:22"
+  command: $(USER):$(PASSWORD):1000
