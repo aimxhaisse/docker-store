@@ -2,7 +2,7 @@
 
 A data store:
 
-- push files via FTP
+- push files via FTP/SFTP
 - serve them via HTTP
 
 ## Installation
