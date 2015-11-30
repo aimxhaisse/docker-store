@@ -3,7 +3,7 @@ www:
   ports:
   - "8095:80"
   volumes:
-  - data/store:/usr/share/nginx/html
+  - ./data/store:/usr/share/nginx/html
 
 ftp:
   build: ftp
@@ -16,8 +16,8 @@ ftp:
   - "2004:2004"
   - "2005:2005"
   volumes:
-  - data/store:/var/www
-  - data/credentials:/etc/vsftpd
+  - ./data/store:/var/www
+  - ./data/credentials:/etc/vsftpd
 
 sftp:
   image: atmoz/sftp
